@@ -505,7 +505,7 @@ for item in data:
 
 # 4. Display
 st.title("🎓 NCERT Science Knowledge Map")
-st.write("Visualizing the connections between Grade 6, 7, and 8 concepts.")
+st.write("Visualizing connections between the Science concepts of Grade 7, and 8.")
 
 config = Config(width=1000, height=700, directed=True, physics=True)
 return_value = agraph(nodes=nodes, edges=edges, config=config)
@@ -517,4 +517,5 @@ if return_value:
         if item["subject"] == return_value:
             st.sidebar.info(f"**Concept:** {item['subject']}")
             st.sidebar.write(f"**Context:** {item['context']}")
+
             st.sidebar.write(f"**Chapter:** {item['metadata']['chapter_title']}")
